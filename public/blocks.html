@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Blockchain Demo</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+   <!--     Fonts and icons     -->
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+   />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Material Kit CSS -->
+   <link rel="stylesheet" href="assets/css/material-kit.css">
+
+</head>
+
+<body id="main">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+         <a class="navbar-brand" href="/">BLOCKCHAIN DEMO</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" href="/intro.html">Intro
+                     <span class="sr-only">(current)</span>
+                  </a>
+               </li>
+               <li class="nav-item active">
+                  <a class="nav-link" href="/blocks.html">Blocks</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/blockchains.html">Blockchains</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="distribution-demo.html">Distributed Demo</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div class="container-fluid">
+      <h1>BLOCKS</h1>
+      <div class="row">
+         <div class="col-12">
+            <p class="main-text">They stars of every blockchain is it's blocks. Every so often a new block is created ( mined ), roughly every 10 minutes
+               in the case of Bitcoin, containing any transactions that were made since the mining of the previous block. The first of
+               which is known as the genesis block.</p>
+            
+            <p class="main-text">In order to create one of these infamous blocks, one must solve an extremely difficult puzzle. This puzzle is based on a
+               cryptographic hash algorithm, SHA-256 being one of them. A cryptographic hash acts like a signature for a text, data file,
+               or in this case a block. SHA-256 algorithm generates a random fixed sized (256-bit) hash. A unique set of data will always
+               produce the same unique hash, but even a single change in the data will create a new completely random hash. This and
+               the fact that a hash is a one way function, meaning it cannot be decrypted back, make it suitable for digital signatures.</p>
+            
+            <p class="main-text">In each block a certain set of values are run through the hashing algorithm in order to generate a hash. In the example below
+               ( and all subsequent examples ) the block's data, previous blocks hash, and date it was mined are used to create it's
+               hash. If you add a character to the data below you will notice the hash completely change. However if you delete that
+               character it will be exactly as it was.</p>
+            
+            <p class="main-text">In order to add a block to the blockchain it must first be signed, meaning the hash must meet a certain requirement, or
+               <em>difficulty</em>, . This is the Proof-of-Work.  In this case a signed hash must start with '000'. In order to achieve this the
+               <em>nonce</em> is also used to create a valid hash. The nonce is an arbitrary number that can only be used once, and is included
+               with the block's data, date mined, and previous hash values in order to find a hash that satisfies the set difficulty.
+               Finding a valid hash, in essence, is the mining process. By increasing the the difficulty of a valid hash the more computational
+               power and time is required to mine a new block.</p>
+         </div>
+      </div>
+      <div class="row justify-content-center">
+         <div class="col-12 col-md-6 mt-5" id="blockchain-peer-0"></div>
+      </div>
+   </div>
+
+   <!--   Core JS Files   -->
+   <script src="assets/js/core/jquery.min.js"></script>
+   <script src="assets/js/core/popper.min.js"></script>
+   <script src="assets/js/bootstrap-material-design.js"></script>
+
+   <!-- Plugin for Date Time Picker and Full Calendar Plugin-->
+   <script src="assets/js/plugins/moment.min.js"></script>
+
+   <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+   <!-- <script src="assets/js/plugins/bootstrap-selectpicker.js"></script> -->
+
+   <!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+   <!-- <script src="assets/js/plugins/bootstrap-tagsinput.js"></script> -->
+
+   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+   <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+
+   <!-- Plugin for Small Gallery in Product Page -->
+   <!-- <script src="assets/js/plugins/jquery.flexisel.js"></script> -->
+
+
+   <!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+   <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+
+   <!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+   <script src="assets/js/plugins/nouislider.min.js"></script>
+
+   <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+   <script src="assets/js/material-kit.js?v=2.0.0"></script>
+
+   <script type="text/javascript" src="js/libs/crypto-js/crypto-js.js"></script>
+   <script src="js/libs/moment.min.js"></script>
+   <script src="js/ctrls/BlockCtrl.js"></script>
+   <script src="js/ctrls/PeerCtrl.js"></script>
+   <script src="js/ctrls/UICtrl.js"></script>
+   <script src="js/blocksMain.js"></script>
+</body>
+
+</html>

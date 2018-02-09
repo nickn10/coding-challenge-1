@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Blockchain Demo</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!--     Fonts and icons     -->
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+      />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Material Kit CSS -->
+   <link rel="stylesheet" href="assets/css/material-kit.css">
+</head>
+
+<body id="main">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                  <a class="navbar-brand" href="/">BLOCKCHAIN DEMO</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                              <li class="nav-item">
+                                    <a class="nav-link" href="/intro.html">Intro
+                                          <span class="sr-only">(current)</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="/blocks.html">Blocks</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="/blockchains.html">Blockchains</a>
+                              </li>
+                              <li class="nav-item active">
+                                    <a class="nav-link" href="/distribution-demo.html">Distributed Demo</a>
+                              </li>
+                        </ul>
+                  </div>
+            </div>
+      </nav>
+
+   <div class="container-fluid">
+      <p class="main-text">Add more peers and play around, or simulate trying to alter a chain while competing against other miners to get a sense of how difficult it would be.</p>
+      <div id="distro-btns">
+            <button class="btn-custom" id="add-peer-btn">
+                  <i class="material-icons">account_circle</i> Add Peer
+            </button>
+            <button class="btn-custom" id="simulation-start">
+                  <i class="material-icons">play_arrow</i> Simulate
+            </button>
+            <button class="btn-custom hidden" id="simulation-stop">
+                  <i class="material-icons">stop</i> Simulate
+            </button>
+            <button class="btn-custom hidden" id="simulation-reset">
+                  <i class="material-icons">replay</i> Simulate
+            </button>
+      </div>
+      <div class="row" id="main-content"></div>
+      <!-- <div class="row fixed-bottom bottom-btn" id="bottom-btns">
+         <div class="col-12 text-right">
+            
+
+         </div>
+      </div> -->
+   </div>
+
+      <!--   Core JS Files   -->
+      <script src="assets/js/core/jquery.min.js"></script>
+      <script src="assets/js/core/popper.min.js"></script>
+      <script src="assets/js/bootstrap-material-design.js"></script>
+
+      <!-- Plugin for Date Time Picker and Full Calendar Plugin-->
+      <script src="assets/js/plugins/moment.min.js"></script>
+
+      <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+      <!-- <script src="assets/js/plugins/bootstrap-selectpicker.js"></script> -->
+
+      <!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+      <!-- <script src="assets/js/plugins/bootstrap-tagsinput.js"></script> -->
+
+      <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+      <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+
+      <!-- Plugin for Small Gallery in Product Page -->
+      <!-- <script src="assets/js/plugins/jquery.flexisel.js"></script> -->
+
+
+      <!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+      <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+
+      <!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+      <script src="assets/js/plugins/nouislider.min.js"></script>
+
+      <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+      <script src="assets/js/material-kit.js?v=2.0.0"></script>
+
+      <script type="text/javascript" src="js/libs/crypto-js/crypto-js.js"></script>
+      <script src="js/libs/moment.min.js"></script>
+      <script src="js/ctrls/BlockCtrl.js"></script>
+      <script src="js/ctrls/PeerCtrl.js"></script>
+      <script src="js/ctrls/UICtrl.js"></script>
+      <script src="js/bcMain.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+body {
+   background-color: rgb(47, 79, 79) !important;
+   color: antiquewhite !important;
+   position: relative;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons.md-dark { color: rgb(42, 90, 119); }
+.material-icons.md-dark.md-inactive { color: rgba(42, 90, 119, 0.8); }
+
+.material-icons.md-light { color: rgb(195, 196, 209); }
+.material-icons.md-light.md-inactive { color: rgba(52, 60, 175, 0.3); }
+
+.main-text {
+  font-size: 1.1em;
+  max-width: 100%;
+}
+
+img {
+  float: right;
+  overflow: auto;
+}
+
+.welcome-message {
+   font-size: 1.5em;
+}
+
+#main-content {
+  padding-bottom: 40px;
+}
+
+.peer-number {
+  margin-top: 0;
+}
+
+.data-input {
+   border-top: 1px solid lightgray;
+   border-left: 1px solid lightgray;
+   border-right: 1px solid lightgray;
+   padding: 0 2px;
+}
+
+.btn-custom {
+   display: inline-flex;
+   justify-content: center;
+   border-radius: 35px;
+   padding: 8px 25px;
+   color: white;
+   background-color: rgb(42, 90, 119);
+   transition: all 0.2s;
+}
+
+.btn-custom.mine {
+   border-radius: 10px;
+}
+
+.btn-custom:hover {
+   transform: scale(1.05);
+ }
+
+.btn-disabled {
+   background-color: rgba(42, 90, 119, 0.6);
+}
+
+.peer {
+   border: 2px solid rgba(42, 90, 119, 0.4);
+   padding: 10px;
+   border-radius: 20px;
+   background-color: white;
+   display: inline-block;
+   margin: 10px;
+   transition: all 0.1s;
+}
+
+.peer.text-center.invalid {
+   background-color: lightpink;
+}
+
+.peer:hover {
+   box-shadow: 3px 3px 5px 2px #a5a1a1;
+   transform: scale(1.01);
+}
+
+.card.block {
+   border: 1px solid rgba(42, 90, 119, 0.6);
+   margin: 0 20px 0 0;
+   padding: 10px;
+   transition: all 0.15s;
+   display: inline-block;
+}
+
+.card.block.small {
+  max-width: 320px;
+  font-size: 0.9em;
+}
+
+.card.block.medium {
+  max-width: 340px;
+}
+
+.card.block.large {
+  min-width: 450px;
+  max-width: 465px;
+  font-size: 0.95em;
+}
+
+.card.add-block {
+   border: 1px solid rgba(42, 90, 119, 0.6);
+   margin: 20px 10px;
+   max-height: 220px;
+   max-width: 200px;
+   padding: 10px;
+   transition: all 0.15s;
+   display: inline-block;
+}
+
+.peer-display {
+  width: 15vw;
+  max-width: 220px;
+  margin-left: 20px;
+}
+
+.blockchain-display {
+   width: 83vw;
+   margin: 10px;
+   padding: 10px;
+   display: inline-block;
+   overflow: auto;
+   white-space: nowrap;
+}
+
+.card.block.invalid {
+   background-color: pink;
+}
+
+.block-title {
+   margin: 0;
+   font-weight: bold;
+}
+
+.date {
+   font-size: .8em;
+   font-style: italic;
+}
+
+.nonce-number {
+   border: 2px solid lightgrey;
+   border-radius: 5px;
+   padding: 3px;
+   font-weight: bold;
+   color: darkgoldenrod;
+}
+
+.current-hash, .previous-hash {
+   border: 1px solid lightgrey;
+   padding: 3px;
+   font-size: 0.8em;
+   font-weight: bold;
+   border-radius: 5px;
+   text-overflow: clip;
+   overflow: hidden;
+   white-space: nowrap;
+   display: block;
+   color: red;
+}
+
+.valid {
+   color: darkgoldenrod;
+}
+
+.hidden {
+   display: none;
+}
+
+.new-block {
+   padding: 15px;
+}
+
+.bottom-btn {
+  padding: 0 40px 40px 0;
+}
+
+.page-title, #distro-btns {
+  margin-top: 0;
+  display: inline-block;
+}
+
+
+
