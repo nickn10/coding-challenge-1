@@ -30,7 +30,7 @@ img {
 }
 
 #main-content {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .peer-number {
@@ -190,14 +190,14 @@ img {
 }
 
 #next-btn {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 40px;
   display: inline-block;
 }
 
 #back-btn {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 40px;
   display: inline-block;
