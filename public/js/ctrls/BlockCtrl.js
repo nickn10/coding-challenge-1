@@ -48,7 +48,7 @@ const BlockCtrl = (function() {
 
   Blockchain.prototype = {
       createGenesisBlock: () =>  {
-        const genesis = new Block(0, "Important data is stored here", '0', new Date('08/18/2008 08:00:00').getTime());
+        const genesis = new Block(0, "Important data is stored here", '0', new Date('01/03/2009 18:15:05').getTime());
         genesis.hash = genesis.calculateHash();
         genesis.mineHash()
         return genesis;
