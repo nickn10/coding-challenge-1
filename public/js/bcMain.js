@@ -19,13 +19,13 @@
    uiMainContent.addEventListener('submit', (e) => {
       e.preventDefault();
       // ADD BLOCK
-      if (e.target.children[1].children[0].classList.value === 'btn-custom add-block') {
+      if (e.target.children[1].children[0].classList.value === 'btn add-block') {
          const peerIndex = getPeerIndex(e.target.parentElement);
          const peer = peerList[peerIndex];
          const peerChainLength = peer.blockchain.chain.length;
          const uiData = document.getElementById(`new-block-peer-${peer.index}`).value;
          const timestamp = Date.now();
-         if(!peer.blockchain.isAlterd) {
+         if(!peer.blockchain.isAltered) {
             peerList.forEach(peer => {
                if(peer.blockchain.chain.length > peerChainLength) {
                   return;
@@ -40,12 +40,13 @@
                      UICtrl.invalidChain(peer);
                   }
                }
+               scrollToBottom(peer);
             });
          }
          const newBlock = peer.blockchain.addNewBlock(uiData, timestamp);
          UICtrl.addNewBlock(newBlock, peer);
          uiData.value = '';
-         scrollToEnd();
+         scrollToBottom(peer);
       } else if(e.target.children[4].children[0].classList.value === 'btn-custom mine') {
       // MINE BLOCK
          const blockIndex = getBlockIndex(e.target.parentElement);
@@ -56,7 +57,7 @@
          let nextBlock = Boolean(blockIndex < uiBlocks.length - 1)
          let uiNextPrevHash;
          block.mineHash(true);
-         peer.blockchain.isAlterd = true;
+         peer.blockchain.isAltered = true;
          if (nextBlock) {
             nextBlock = peer.blockchain.chain[blockIndex + 1]
             uiNextPrevHash = document.getElementById(`peer-${peerIndex}-prev-hash-${blockIndex + 1}`)
@@ -81,7 +82,7 @@
          newPeer.blockchain.addNewBlock();
          if (peerList.length > 0) {
             peerList.forEach(peer => {
-               if (peer.blockchain.isValidChain() && peer.blockchain.chain.length > longestValidChain.length) {
+               if (!peer.blockchain.isAltered && peer.blockchain.chain.length > longestValidChain.length) {
                   
                   longestValidChain = peer.blockchain.chain;
                }
@@ -97,7 +98,7 @@
          UICtrl.addNewPeer(newPeer);
          newPeer.blockchain.chain.forEach(block => UICtrl.addNewBlock(block, newPeer));
          scrollToEnd();
-         scrollToBottom();
+         scrollToBottom(newPeer);
       });
    }
 
@@ -166,35 +167,49 @@
    };
 
    function scrollToEnd() {
-      peerList.forEach(peer => {
-         const uiAddBlockBtn = document.getElementById(`add-block-btn-${peer.index}`);
-         if (peer.blockchain.chain.length > 2 && uiAddBlockBtn.classList.value.indexOf('btn-disabled') === -1) {
-            const uiBlockchain = document.getElementById(`blockchain-peer-${peer.index}`)
-            const newBlock = uiBlockchain.lastElementChild;
-            let prevBlock = newBlock.previousElementSibling;
+      const newPeer = uiMainContent.lastElementChild;
+      const prevPeer = newPeer.previousElementSibling;
 
-            const clientWidth = uiBlockchain.clientWidth;
-            const scrollLeft = uiBlockchain.scrollLeft;
-            const scrollWidth = uiBlockchain.scrollWidth;
+      const clientWidth = uiMainContent.clientWidth;
+      const scrollLeft = uiMainContent.scrollLeft;
+      const scrollWidth = uiMainContent.scrollWidth;
 
-            const newBlockStyle = window.getComputedStyle(newBlock, null);
-            const newBlockWidth = parseInt(newBlockStyle.getPropertyValue("width"));
-            let prevBlockWidth = 0;
+      const newPeerStyle = window.getComputedStyle(newPeer, null);
+      const newPeerWidth = parseInt(newPeerStyle.getPropertyValue("width"));
+      let prevPeerWidth = 0;
 
-            if (prevBlock) {
-               const prevBlockStyle = window.getComputedStyle(prevBlock, null);
-               prevBlockWidth = parseInt(prevBlockStyle.getPropertyValue("width"));
-            }
+      if (prevPeer) {
+         const prevPeerStyle = window.getComputedStyle(prevPeer, null);
+         prevPeerWidth = parseInt(prevPeerStyle.getPropertyValue("width"));
+      }
 
-            if ((clientWidth + scrollLeft + newBlockWidth + prevBlockWidth) >= scrollWidth) {
-               uiBlockchain.scrollLeft = scrollWidth;
-            }
-         }
-      });
+      if ((clientWidth + scrollLeft + newPeerWidth + prevPeerWidth) >= scrollWidth) {
+         uiMainContent.scrollLeft = scrollWidth;
+      }
    }
 
-   function scrollToBottom() {
-      window.scrollTo(0,document.body.scrollHeight);
+   function scrollToBottom(peer) {
+      const uiChainDisplay = document.getElementById(`blockchain-peer-${peer.index}`);
+      if(peer.blockchain.isValidChain()) {
+         const newBlock = uiChainDisplay.lastElementChild;
+         const prevBlock = newBlock.previousElementSibling;
+
+         const clientHeight = uiChainDisplay.clientHeight;
+         const scrollTop = uiChainDisplay.scrollTop;
+         const scrollHeight = uiChainDisplay.scrollHeight;
+
+         const newBlockStyle = window.getComputedStyle(newBlock, null);
+         const newBlockHeight = parseInt(newBlockStyle.getPropertyValue("height"));
+         let prevBlockHeight = 0;
+         if (prevBlock) {
+            const prevBlockStyle = window.getComputedStyle(prevBlock, null);
+            prevBlockHeight = parseInt(prevBlockStyle.getPropertyValue("height"));
+         }
+
+         if ((clientHeight + scrollTop + newBlockHeight + prevBlockHeight) >= scrollHeight) {
+            uiChainDisplay.scrollTop = scrollHeight;
+         }
+      }
    }
 
    function getBlockIndex(element) {

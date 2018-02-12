@@ -3,36 +3,37 @@ const UICtrl = (function() {
 
    const addNewPeer = (peer) => {
       const newPeerContent = document.createElement('div');
-      newPeerContent.classList = 'row mt-2'
+      newPeerContent.classList = "col-12 col-md-6 col-xl-4"
       newPeerContent.id = `peer-content-${peer.index}`
       newPeerContent.innerHTML = `
-            <div class="peer-display text-center" id="display-peer-${peer.index}">
-               <i class="material-icons md-48 md-light mt-3">account_circle</i>
-               <h3 class="peer-number">PEER#${peer.index}</h3>
-               <div id="add-block-${peer.index}" class="card add-block mt-0">
-                  <form>
-                     <div class="form-group">
-                        <span>DATA:</span>
-                        <div class="data-input">
-                           <textarea name="data" class="form-control" rows="5" id="new-block-peer-${peer.index}"></textarea>
-                        </div>
-                     </div>
-                     <div class="text-center">
-                        <button class="btn-custom add-block" id="add-block-btn-${peer.index}">Add Block</button>
-                     </div>
-                  </form>
+      <div class="col-12 peer-display mt-3" id="display-peer-${peer.index}">
+            <i class="material-icons md-36 md-light">account_circle</i>
+            <h3 class="peer-number">PEER#${peer.index}</h3>
+      </div>
+      <div class="col-12 mx-auto blockchain-display" id="blockchain-peer-${peer.index}"></div>
+      <div class="col-12 mx-auto">
+         <div id="add-block-${peer.index}" class="card block mt-0">
+            <form>
+               <div class="form-group">
+                  <span>DATA:</span>
+                  <div class="data-input">
+                     <textarea name="data" class="form-control" rows="2" id="new-block-peer-${peer.index}"></textarea>
+                  </div>
                </div>
-            </div>
-            <div class="blockchain-display" id="blockchain-peer-${peer.index}"></div> 
+               <div class="text-center">
+                  <button class="btn add-block" id="add-block-btn-${peer.index}">Add Block</button>
+               </div>
+            </form>
+         </div>
+      </div>
       `
       uiMainContent.appendChild(newPeerContent);
    }
 
    const addNewBlock = (block,peer, size) => {
-      const blockSize = size || 'small'
       const uiBlockchain = document.getElementById(`blockchain-peer-${peer.index}`);
       let newBlock = document.createElement('div');
-         newBlock.classList = `card block ${blockSize}`
+         newBlock.classList = `card block`
          newBlock.id = `peer-${peer.index}-block-${block.index}`
       newBlock.innerHTML = 
             `
