@@ -1,13 +1,13 @@
-(function() {
+(function () {
    const uiContent = document.getElementById('blockchain-peer-0');
    const peerList = []
-   
+
    // LOAD GENESIS BLOCK
    window.addEventListener('load', () => {
-   const peer = new PeerCtrl.Peer(0);
-   peer.blockchain.addNewBlock();
-   peerList.push(peer);
-   UICtrl.addNewBlock(peer.blockchain.getLastBlock(), peer, 'large');
+      const peer = new PeerCtrl.Peer(0);
+      peer.blockchain.addNewBlock();
+      peerList.push(peer);
+      UICtrl.addNewBlock(peer.blockchain.getLastBlock(), peer, 'large');
    });
 
    // UPDATE BLOCK HASH ON INPUT
@@ -30,7 +30,7 @@
 
    // MINE BLOCK
    uiContent.addEventListener('click', (e) => {
-      if(e.target.classList.value === 'btn-custom mine') {
+      if (e.target.classList.value === 'btn-custom mine') {
          const peer = peerList[0]
          const block = peer.blockchain.chain[0];
          block.mineHash(true);

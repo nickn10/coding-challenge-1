@@ -21,8 +21,6 @@ body {
 }
 
 img {
-  padding-left: 30px;
-  max-width: 100vw;
   float: right;
   overflow: auto;
 }
@@ -32,10 +30,7 @@ img {
 }
 
 #main-content {
-  max-width: 100vw;
-  min-width: auto;
-  overflow: auto;
-  /* padding-bottom: 60px; */
+  padding-bottom: 60px;
 }
 
 .peer-number {
@@ -91,15 +86,37 @@ img {
 }
 
 .card.block {
-   border: 1px solid black;
-   margin: 10px 0;
-   min-width: 320px;
+   border: 1px solid rgba(42, 90, 119, 0.6);
+   margin: 0 20px 0 0;
    padding: 10px;
    transition: all 0.15s;
    display: inline-block;
-   font-size: 0.9em;
 }
 
+.card.block.small {
+  max-width: 320px;
+  font-size: 0.9em;
+}
+
+.card.block.medium {
+  max-width: 340px;
+}
+
+.card.block.large {
+  min-width: 450px;
+  max-width: 465px;
+  font-size: 0.95em;
+}
+
+.card.add-block {
+   border: 1px solid rgba(42, 90, 119, 0.6);
+   margin: 20px 10px;
+   max-height: 220px;
+   max-width: 200px;
+   padding: 10px;
+   transition: all 0.15s;
+   display: inline-block;
+}
 
 .peer-display {
   width: 15vw;
@@ -108,11 +125,10 @@ img {
 }
 
 .blockchain-display {
+   width: 83vw;
    margin: 10px;
-   min-width: ;
-   max-height: 65vh;
-   display: flex;
-   flex-direction: column;
+   padding: 10px;
+   display: inline-block;
    overflow: auto;
    white-space: nowrap;
 }
@@ -175,19 +191,14 @@ img {
 
 #next-btn {
   position: absolute;
-  /* bottom: 0; */
+  bottom: 0;
   right: 40px;
   display: inline-block;
 }
 
 #back-btn {
   position: absolute;
-  /* bottom: 0; */
+  bottom: 0;
   left: 40px;
   display: inline-block;
-}
-
-.bottom-btns {
-  position: absolute;
-  bottom: 0;
 }

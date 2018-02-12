@@ -2,119 +2,125 @@
 <html lang="en">
 
 <head>
-   <title>Blockchain Demo</title>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+      <title>Blockchain Demo</title>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 
-   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-   <!--     Fonts and icons     -->
-   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-   />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-   <link rel="stylesheet" href="css/style.css">
-   <!-- Material Kit CSS -->
-   <link rel="stylesheet" href="assets/css/material-kit.css">
+      <!--     Fonts and icons     -->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+      />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Material Kit CSS -->
+      <link rel="stylesheet" href="assets/css/material-kit.css">
 
 </head>
 
 <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-         <a class="navbar-brand" href="/">BLOCKCHAIN DEMO</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-               <li class="nav-item">
-                  <a class="nav-link" href="/intro.html">Intro
-                     <span class="sr-only">(current)</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="/blocks.html">Blocks</a>
-               </li>
-               <li class="nav-item active">
-                  <a class="nav-link" href="/blockchains.html">Blockchains</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="distribution-demo.html">Distributed Demo</a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                  <a class="navbar-brand" href="/">BLOCKCHAIN DEMO</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                              <li class="nav-item">
+                                    <a class="nav-link" href="/intro.html">Intro
+                                          <span class="sr-only">(current)</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="/blocks.html">Blocks</a>
+                              </li>
+                              <li class="nav-item active">
+                                    <a class="nav-link" href="/blockchains.html">Blockchains</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="distribution-demo.html">Distributed Demo</a>
+                              </li>
+                        </ul>
+                  </div>
+            </div>
+      </nav>
 
-   <div class="container-fluid" id="main">
-      <h1>BLOCKCHAINS</h1>
-      <div class="row">
-         <div class="col-12">
-            <p class="main-text"><img src="assets/img/computer-network.jpg" alt="">When adding a block to the chain, and to have a valid blockchain, not only must the newly mined block have a valid hash,
-                  but it's previous hash value must match the preceding block's hash. This is extremely important as this defines the
-                  order of the blocks in the chain. If you add a few blocks to create a chain below, you'll notice that not only does
-                  each new block contain a valid hash but it's previous hash value matches the hash of the block before it. You now have
-                  a valid blockchain!</p>
-            
-            <p class="main-text">Now that you have a valid blockchain with important information in it, what would happen if you attempted to alter that important
-                  data in the genesis block to give your self some extra dough. If you guessed you'd mess up your perfectly good blockchain
-                  you would be correct! As seen prior, changing the data in a block changes the hash. And since the following block's
-                  hash takes into account the previous hash it's hash has changed, and so on for every block that follows in the chain.  You could always mine all the blocks in the chain again to make it valid, but that would take an incredible amount of computing power! Even if you  where able to fork a blockchain and mine new blocks at a faster pace the the rest of the network, there
-                        would still be thousands of copies to compare it against to see that it had been altered.</p>
-         </div>
-      </div>
-      <div class="row" id="main-content"></div>
+      <div class="container-fluid" id="main">
+            <h1>BLOCKCHAINS</h1>
+            <div class="row">
+                  <div class="col-12">
+                        <p class="main-text">
+                              <img src="assets/img/computer-network.jpg" alt="">When adding a block to the chain, and to have a valid blockchain, not only must the newly mined
+                              block have a valid hash, but it's previous hash value must match the preceding block's hash.
+                              This is extremely important as this defines the order of the blocks in the chain. If you add
+                              a few blocks to create a chain below, you'll notice that not only does each new block contain
+                              a valid hash but it's previous hash value matches the hash of the block before it. You now
+                              have a valid blockchain!</p>
+
+                        <p class="main-text">Now that you have a valid blockchain with important information in it, what would happen if you attempted
+                              to alter that important data in the genesis block to give your self some extra dough. If you
+                              guessed you'd mess up your perfectly good blockchain you would be correct! As seen prior, changing
+                              the data in a block changes the hash. And since the following block's hash takes into account
+                              the previous hash it's hash has changed, and so on for every block that follows in the chain.
+                              You could always mine all the blocks in the chain again to make it valid, but that would take
+                              an incredible amount of computing power! Even if you where able to fork a blockchain and mine
+                              new blocks at a faster pace the the rest of the network, there would still be thousands of
+                              copies to compare it against to see that it had been altered.</p>
+                  </div>
+            </div>
+            <div class="row" id="main-content"></div>
             <div id="back-btn">
                   <form action="/blocks.html">
                         <button type="submit" class="btn">BACK</button>
                   </form>
             </div>
-      <div id="next-btn">
-            <form action="/distribution-demo.html">
-                  <button type="submit" class="btn">NEXT</button>
-            </form>
+            <div id="next-btn">
+                  <form action="/distribution-demo.html">
+                        <button type="submit" class="btn">NEXT</button>
+                  </form>
+            </div>
       </div>
-   </div>
-      
-
-   <!--   Core JS Files   -->
-   <script src="assets/js/core/jquery.min.js"></script>
-   <script src="assets/js/core/popper.min.js"></script>
-   <script src="assets/js/bootstrap-material-design.js"></script>
-
-   <!-- Plugin for Date Time Picker and Full Calendar Plugin-->
-   <script src="assets/js/plugins/moment.min.js"></script>
-
-   <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-   <!-- <script src="assets/js/plugins/bootstrap-selectpicker.js"></script> -->
-
-   <!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
-   <!-- <script src="assets/js/plugins/bootstrap-tagsinput.js"></script> -->
-
-   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-   <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
-
-   <!-- Plugin for Small Gallery in Product Page -->
-   <!-- <script src="assets/js/plugins/jquery.flexisel.js"></script> -->
 
 
-   <!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-   <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+      <!--   Core JS Files   -->
+      <script src="assets/js/core/jquery.min.js"></script>
+      <script src="assets/js/core/popper.min.js"></script>
+      <script src="assets/js/bootstrap-material-design.js"></script>
 
-   <!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-   <script src="assets/js/plugins/nouislider.min.js"></script>
+      <!-- Plugin for Date Time Picker and Full Calendar Plugin-->
+      <script src="assets/js/plugins/moment.min.js"></script>
 
-   <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
-   <script src="assets/js/material-kit.js?v=2.0.0"></script>
+      <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+      <!-- <script src="assets/js/plugins/bootstrap-selectpicker.js"></script> -->
 
-   <script type="text/javascript" src="js/libs/crypto-js/crypto-js.js"></script>
-   <script src="js/libs/moment.min.js"></script>
-   <script src="js/ctrls/BlockCtrl.js"></script>
-   <script src="js/ctrls/PeerCtrl.js"></script>
-   <script src="js/ctrls/UICtrl.js"></script>
-   <script src="js/bcMain.js"></script>
+      <!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+      <!-- <script src="assets/js/plugins/bootstrap-tagsinput.js"></script> -->
+
+      <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+      <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+
+      <!-- Plugin for Small Gallery in Product Page -->
+      <!-- <script src="assets/js/plugins/jquery.flexisel.js"></script> -->
+
+
+      <!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+      <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+
+      <!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+      <script src="assets/js/plugins/nouislider.min.js"></script>
+
+      <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+      <script src="assets/js/material-kit.js?v=2.0.0"></script>
+
+      <script type="text/javascript" src="js/libs/crypto-js/crypto-js.js"></script>
+      <script src="js/libs/moment.min.js"></script>
+      <script src="js/ctrls/BlockCtrl.js"></script>
+      <script src="js/ctrls/PeerCtrl.js"></script>
+      <script src="js/ctrls/UICtrl.js"></script>
+      <script src="js/bcMain.js"></script>
 </body>
 
 </html>

@@ -2,77 +2,80 @@
 <html lang="en">
 
 <head>
-   <title>Blockchain Demo</title>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>Blockchain Demo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 
-   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-   <!--     Fonts and icons     -->
-   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-   />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-   <link rel="stylesheet" href="css/style.css">
-   <!-- Material Kit CSS -->
-   <link rel="stylesheet" href="assets/css/material-kit.css">
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Material Kit CSS -->
+    <link rel="stylesheet" href="assets/css/material-kit.css">
 
 </head>
 
 <body id="main">
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-         <a class="navbar-brand" href="/">BLOCKCHAIN DEMO</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-               <li class="nav-item active">
-                  <a class="nav-link" href="/intro.html">Intro
-                     <span class="sr-only">(current)</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="/blocks.html">Blocks</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="/blockchains.html">Blockchains</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="distribution-demo.html">Dristributed Demo</a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">BLOCKCHAIN DEMO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/intro.html">Intro
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blocks.html">Blocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blockchains.html">Blockchains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="distribution-demo.html">Dristributed Demo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="container-fluid">
-       <h1>INTRODUCTION</h1>
-       <div class="row">
-          <div class="col-12 mt-5 mb-5">
-             <p class="main-text"><img src="assets/img/building-blocks.jpg" alt="">
-                The concept of a blockchain can be an enigmatic and overwhelming topic, but at it's core it's simply a digital ledger that
-               is distributed and held by every participant ( or node ) connected to a network. Much like a traditional ledger a blockchain
-               contains important information, such as financial transactions, but instead of this data being stored on a page it's stored
-               in a block. Theses blocks are chained together one after the other forming a blockchain.</p>
-               
-               <p class="main-text">Different blockchains may add blocks to their chain using different consensus algorithms ( an agreed on set of rules to how
-                  and when new blocks are added), the most well-known of which is Bitcoin’s
-                  <em>Proof-of-Work</em>. </p>
-               
-               <p class="main-text">The first rule of Proof-of-work is that one block should be added to the blockchain, roughly, every ten minutes. This is
-                  accomplished through the process of ‘mining’. Nodes attempting to add a block to the chain are called ‘miners’. They use
-                  computational power of their computers to try and solve a cryptographic ‘puzzle’. Only when this puzzle is solved, can
-                  a block be added to the chain. Each miner who solves the puzzle, or ‘mines’, a new block that is added to the chain, is
-                  rewarded by the network. In the case of Bitcoin the reward is 12.5 newly minted bitcoins.</p>
-               
-               <p class="main-text">When a new block is mined, all the nodes will first check if the block is valid and add it to their copy of the chain. Nodes
-                  will only add a new block to their chain if it follows the rules of the consensus algorithm. Only once a consensus is
-                  reached, is the new block officially confirmed and added to the blockchain. Because of the vast number of copies of a
-                  blockchain and the resources needed to add new blocks, it is extremely difficult to alter the chain or the data stored
-                  within.</p>
+        <h1>INTRODUCTION</h1>
+        <div class="row">
+            <div class="col-12 mt-5 mb-5">
+                <p class="main-text">
+                    <img src="assets/img/building-blocks.jpg" alt=""> The concept of a blockchain can be an enigmatic and overwhelming topic, but at it's core it's simply
+                    a digital ledger that is distributed and held by every participant ( or node ) connected to a network.
+                    Much like a traditional ledger a blockchain contains important information, such as financial transactions,
+                    but instead of this data being stored on a page it's stored in a block. Theses blocks are chained together
+                    one after the other forming a blockchain.</p>
+
+                <p class="main-text">Different blockchains may add blocks to their chain using different consensus algorithms ( an agreed on set
+                    of rules to how and when new blocks are added), the most well-known of which is Bitcoin’s
+                    <em>Proof-of-Work</em>. </p>
+
+                <p class="main-text">The first rule of Proof-of-work is that one block should be added to the blockchain, roughly, every ten minutes.
+                    This is accomplished through the process of ‘mining’. Nodes attempting to add a block to the chain are
+                    called ‘miners’. They use computational power of their computers to try and solve a cryptographic ‘puzzle’.
+                    Only when this puzzle is solved, can a block be added to the chain. Each miner who solves the puzzle,
+                    or ‘mines’, a new block that is added to the chain, is rewarded by the network. In the case of Bitcoin
+                    the reward is 12.5 newly minted bitcoins.</p>
+
+                <p class="main-text">When a new block is mined, all the nodes will first check if the block is valid and add it to their copy
+                    of the chain. Nodes will only add a new block to their chain if it follows the rules of the consensus
+                    algorithm. Only once a consensus is reached, is the new block officially confirmed and added to the blockchain.
+                    Because of the vast number of copies of a blockchain and the resources needed to add new blocks, it is
+                    extremely difficult to alter the chain or the data stored within.
+                </p>
             </div>
         </div>
         <div id="next-btn">
@@ -81,38 +84,38 @@
             </form>
         </div>
     </div>
-   </div>
+    </div>
 
 
-   <!--   Core JS Files   -->
-   <script src="assets/js/core/jquery.min.js"></script>
-   <script src="assets/js/core/popper.min.js"></script>
-   <script src="assets/js/bootstrap-material-design.js"></script>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/bootstrap-material-design.js"></script>
 
-   <!-- Plugin for Date Time Picker and Full Calendar Plugin-->
-   <script src="assets/js/plugins/moment.min.js"></script>
+    <!-- Plugin for Date Time Picker and Full Calendar Plugin-->
+    <script src="assets/js/plugins/moment.min.js"></script>
 
-   <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-   <!-- <script src="assets/js/plugins/bootstrap-selectpicker.js"></script> -->
+    <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <!-- <script src="assets/js/plugins/bootstrap-selectpicker.js"></script> -->
 
-   <!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
-   <!-- <script src="assets/js/plugins/bootstrap-tagsinput.js"></script> -->
+    <!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+    <!-- <script src="assets/js/plugins/bootstrap-tagsinput.js"></script> -->
 
-   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-   <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+    <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+    <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
 
-   <!-- Plugin for Small Gallery in Product Page -->
-   <!-- <script src="assets/js/plugins/jquery.flexisel.js"></script> -->
+    <!-- Plugin for Small Gallery in Product Page -->
+    <!-- <script src="assets/js/plugins/jquery.flexisel.js"></script> -->
 
 
-   <!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-   <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
 
-   <!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-   <script src="assets/js/plugins/nouislider.min.js"></script>
+    <!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="assets/js/plugins/nouislider.min.js"></script>
 
-   <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
-   <script src="assets/js/material-kit.js?v=2.0.0"></script>
+    <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+    <script src="assets/js/material-kit.js?v=2.0.0"></script>
 
 </body>
 

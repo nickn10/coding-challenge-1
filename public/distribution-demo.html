@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-   <title>Blockchain Demo</title>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-   <!--     Fonts and icons     -->
-   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+      <title>Blockchain Demo</title>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <!--     Fonts and icons     -->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
       />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-   <link rel="stylesheet" href="css/style.css">
-   <!-- Material Kit CSS -->
-   <link rel="stylesheet" href="assets/css/material-kit.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Material Kit CSS -->
+      <link rel="stylesheet" href="assets/css/material-kit.css">
 </head>
 
 <body id="main">
@@ -45,29 +45,29 @@
             </div>
       </nav>
 
-   <div class="container-fluid">
-      <p class="main-text">Add more peers and play around, or simulate trying to alter a chain while keeping up with the rest of the network.</p>
-      <div id="distro-btns">
-            <button class="btn-custom" id="add-peer-btn">
-                  <i class="material-icons">account_circle</i> Add Peer
-            </button>
-            <button class="btn-custom" id="simulation-start">
-                  <i class="material-icons">play_arrow</i> Simulate
-            </button>
-            <button class="btn-custom hidden" id="simulation-stop">
-                  <i class="material-icons">stop</i> Simulate
-            </button>
-            <button class="btn-custom hidden" id="simulation-reset">
-                  <i class="material-icons">replay</i> Simulate
-            </button>
+      <div class="container-fluid">
+            <p class="main-text">Add more peers and play around, or simulate trying to alter a chain while keeping up with the rest of the network.</p>
+            <div id="distro-btns">
+                  <button class="btn-custom" id="add-peer-btn">
+                        <i class="material-icons">account_circle</i> Add Peer
+                  </button>
+                  <button class="btn-custom" id="simulation-start">
+                        <i class="material-icons">play_arrow</i> Simulate
+                  </button>
+                  <button class="btn-custom hidden" id="simulation-stop">
+                        <i class="material-icons">stop</i> Simulate
+                  </button>
+                  <button class="btn-custom hidden" id="simulation-reset">
+                        <i class="material-icons">replay</i> Simulate
+                  </button>
+            </div>
+            <div class="row" id="main-content"></div>
+            <div id="back-btn">
+                  <form action="/blockchains.html">
+                        <button type="submit" class="btn">BACK</button>
+                  </form>
+            </div>
       </div>
-      <div class="row flex-row flex-nowrap" id="main-content"></div>
-      <div id="back-btn">
-            <form action="/blockchains.html">
-                  <button type="submit" class="btn">BACK</button>
-            </form>
-      </div>
-   </div>
 
       <!--   Core JS Files   -->
       <script src="assets/js/core/jquery.min.js"></script>
